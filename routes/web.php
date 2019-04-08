@@ -92,7 +92,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'login' ], function()
 	    Route::get('delete/{id}', 'NewsController@getDelete')->name('deleteNews');
 	});
 });
-Route::get('home', 'PageController@getHome')->name('home');
+Route::get('/', 'PageController@getHome')->name('home');
 Route::get('login', 'PageController@getLogin')->name('login');
 Route::post('login', 'PageController@postLogin');
 Route::get('logout', 'PageController@getLogout')->name('logout');

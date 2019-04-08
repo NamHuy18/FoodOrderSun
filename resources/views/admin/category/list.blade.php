@@ -58,10 +58,10 @@
                         <td>{{ $cat->name }}</td>
                         <td>{{ $cat->slug }}</td>
                         <td class="option">
-                            <a href="edit/{{ $cat->id }}.html" title="Edit" class="tipS ">
+                            <a href="{{ route('editCat', $cat->id) }}" title="Edit" class="tipS ">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/edit.png" />
                             </a>
-                            <a href="delete/{{ $cat->id }}.html"  value="{{ $cat->id }}" title="Delete" class="tipS delete" >
+                            <a href="{{ route('deleteCat', $cat->id) }}"  value="{{ $cat->id }}" title="Delete" class="tipS delete" >
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/delete.png" />
                             </a>
                         </td>

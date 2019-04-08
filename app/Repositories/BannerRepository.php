@@ -58,7 +58,10 @@ class BannerRepository
             {
                 $image = str_random(4) . "_" . $name;
             }
-            unlink('upload/user/'.$banner->image);
+            if (isset($image))
+            {
+                unlink('upload/banner/'.$banner->image);
+            }
             $file->move(config('setting.avatar.banner'), $image);
             $banner->image = $image;
         }

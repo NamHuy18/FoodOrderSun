@@ -68,11 +68,13 @@ class UserRepository
             {
                 $avatar = str_random(4) . '_' . $name;
             }
-            unlink('upload/user/'.$user->avatar);
+            if (isset($user->avatar))
+            {
+                unlink('upload/user/'.$user->avatar);
+            }              
             $file->move(config('setting.avatar.user'), $avatar);          
             $user->avatar = $avatar;
         }
         $user->save();
     }
 }
-

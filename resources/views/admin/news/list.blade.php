@@ -68,10 +68,10 @@
                         <td>{{ $ns->user->name }}</td>
                         <td class="option"><a href="{{ route('listCommentNews', $ns->id) }}">{{ trans('setting.comment') }} {{ count($ns->comments) }}</a></td>
                         <td class="option">
-                            <a href="{{ route('editNews', $ns->id) }} . html" title="Edit" class="tipS ">
+                            <a href="{{ route('editNews', $ns->id) }}" title="Edit" class="tipS ">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/edit.png" />
                             </a>
-                            <a href="{{ route('deleteNews', $ns->id) }} . html" value="{{ $ns->id }}" title="Delete" class="tipS delete" >
+                            <a href="{{ route('deleteNews', $ns->id) }}" value="{{ $ns->id }}" title="Delete" class="tipS delete" >
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/delete.png" />
                             </a>
                         </td>

@@ -89,10 +89,10 @@
                         <td class="option"><a href="{{ route('listImage', $fo->id) }}">{{ trans('setting.image') }} {{ count($fo->images) }}</a></td>
                         <td class="option"><a href="{{ route('listCommentFood', $fo->id) }}">{{ trans('setting.comment') }} {{ count($fo->comments) }}</a></td>
                         <td class="option">
-                            <a href="{{ route('editFood', $fo->id) }} . html" title="Edit" class="tipS">
+                            <a href="{{ route('editFood', $fo->id) }}" title="Edit" class="tipS">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/edit.png"/>
                             </a>
-                            <a href="{{ route('deleteFood', $fo->id) }} . html" value="{{ $fo->id }}" title="Delete" class="tipS delete">
+                            <a href="{{ route('deleteFood', $fo->id) }}" value="{{ $fo->id }}" title="Delete" class="tipS delete">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/delete.png"/>
                             </a>
                         </td>

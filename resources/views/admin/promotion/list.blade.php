@@ -60,10 +60,10 @@
                         <td>{{ $pr->start_date }}</td>
                         <td>{{ $pr->end_date }}</td>
                         <td class="option">
-                            <a href="{{ route('editSale', $pr->id ) }}.html" title="Edit" class="tipS">
+                            <a href="{{ route('editSale', $pr->id ) }}" title="Edit" class="tipS">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/edit.png"/>
                             </a>
-                            <a href="delete/{{ $pr->id }}.html" value="{{ $pr->id }}" title="Delete" class="tipS delete">
+                            <a href="{{ route('deleteSale', $pr->id ) }}" value="{{ $pr->id }}" title="Delete" class="tipS delete">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/delete.png"/>
                             </a>
                         </td>

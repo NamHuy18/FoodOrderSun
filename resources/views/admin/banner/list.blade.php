@@ -63,10 +63,10 @@
                         </td>
                         <td>{{ $bn->status }}</td>
                         <td class="option">
-                            <a href="{{ route('editBanner', $bn->id) }} . html" title="Edit" class="tipS ">
+                            <a href="{{ route('editBanner', $bn->id) }}" title="Edit" class="tipS ">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/edit.png" />
                             </a>
-                            <a href="{{ route('deleteBanner', $bn->id) }} . html"  value="{{ $bn->id }}" title="Delete" class="tipS delete" >
+                            <a href="{{ route('deleteBanner', $bn->id) }}"  value="{{ $bn->id }}" title="Delete" class="tipS delete" >
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/delete.png" />
                             </a>
                         </td>

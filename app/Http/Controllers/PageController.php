@@ -36,6 +36,8 @@ class PageController extends Controller
         $this->foodTop = $foodTop;
         $this->user = $user;
         $this->food = $food;
+        $category = Category::all();
+        view()->share('category', $category);
     }
 
     public function getHome()

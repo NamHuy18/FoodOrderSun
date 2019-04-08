@@ -123,7 +123,10 @@ class FoodRepository
             {
                 $image = str_random(4) . '_' . $name;
             }
-            unlink('upload/food/'.$food->image);
+            if (isset($image))
+            {
+                unlink('upload/food/'.$food->image);
+            }
             $file->move(config('setting.avatar.food'), $image);
             $food->image = $image;
         }

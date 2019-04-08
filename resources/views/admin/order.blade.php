@@ -59,13 +59,13 @@
                         <td class="option"><a href="{{ route('listDetail', $or->id) }}"><img src="{{ asset('bower_components/source/backend/admin/images/icons/view.png') }}" /></a></td>
                         @if ($or->status == 0)
                         <td class="option">
-                            <a href="{{ route('editOrder', $or->id) }} . html" title="Edit" class="tipS">
+                            <a href="{{ route('editOrder', $or->id) }}" title="Edit" class="tipS">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/edit.png"/>
                             </a>
                         </td>
                         @else
                         <td class="option">
-                        <a href="delete/{{ $or->id }}.html"  value="{{ $or->id }}" title="Delete" class="tipS delete" >
+                        <a href="{{ route('deleteOrder', $or->id) }}"  value="{{ $or->id }}" title="Delete" class="tipS delete" >
                             <img src="{{ asset(config('setting.admin_image.icon')) }}/delete.png" />
                         </a>
                         </td>

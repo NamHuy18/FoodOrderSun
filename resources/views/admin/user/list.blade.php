@@ -74,10 +74,10 @@
                             @endif
                         </td>
                         <td class="option">
-                            <a href="edit/{{ $us->id }}.html" title="Edit" class="tipS ">
+                            <a href="{{ route('editUser', $us->id) }}" title="Edit" class="tipS ">
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/edit.png" />
                             </a>
-                            <a href="delete/{{ $us->id }}.html" value="{{ $us->id }}" title="Delete" class="tipS delete" >
+                            <a href="{{ route('deleteUser', $us->id) }}" value="{{ $us->id }}" title="Delete" class="tipS delete" >
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/delete.png" />
                             </a>
                         </td>

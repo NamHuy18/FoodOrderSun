@@ -11,15 +11,9 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\User::class, 10)->create()->each(function($user)
-        {
-        	$user->news()->saveMany(factory(App\News::class, rand(1, 4))->create([
-                'user_id' => $user->id
-                ])
-            );
-        });
         DB::table('users')->insert([
             'name' => 'Do Nam Huy',
+            'avatar' => 'donamhuy.jpg',
             'email' => 'namhuydo18@gmail.com',
             'password' => bcrypt('namhuy98'),
             'level' => 0,

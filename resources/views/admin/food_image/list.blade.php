@@ -56,7 +56,7 @@
                             <img id="avatar_admin" src="{{ asset(config('setting.avatar.foodImage')) }}/{{ $fi->image }}">
                         </td>
                         <td class="option">
-                            <a href="{{ route('deleteImage', $fi->id) }} . html"  value="{{ $fi->id }}" title="Delete" class="tipS delete" >
+                            <a href="{{ route('deleteImage', $fi->id) }}"  value="{{ $fi->id }}" title="Delete" class="tipS delete" >
                                 <img src="{{ asset(config('setting.admin_image.icon')) }}/delete.png" />
                             </a>
                         </td>
