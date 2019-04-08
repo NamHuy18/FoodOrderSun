@@ -60,7 +60,7 @@ class FoodRepository
 
     public function chooseCategory()
     {
-        return Food::all();
+        return Category::all();
     }
 
     public function findOrFail($id)
