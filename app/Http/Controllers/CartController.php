@@ -36,14 +36,13 @@ class CartController extends Controller
         return view('front.pages.cart', compact('cartFood'));
     }
 
-    public function deleteCart($id)
+    public function deleteCart(Request $request)
     {   
-        $food = Food::find($id);
-        if ($id == 'all')
+        if ($request->rowId == 'all')
         {
             Cart::destroy();
         } else {
-            Cart::remove($id);
+            Cart::remove($request->rowId);
         }        
 
         return redirect()->back();

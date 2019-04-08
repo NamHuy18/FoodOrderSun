@@ -36,8 +36,6 @@ class PageController extends Controller
         $this->foodTop = $foodTop;
         $this->user = $user;
         $this->food = $food;
-        $category = Category::all();
-        view()->share('category', $category);
     }
 
     public function getHome()
@@ -74,7 +72,7 @@ class PageController extends Controller
     		return redirect(route('home'));
         } else 
         { 
-    		return redirect(route('login'))->with('message', trans('setting.loginpage.fail'));
+    		return redirect(route('login'))->with('message1', trans('setting.loginpage.fail'));
     	}
     }
 
@@ -94,7 +92,7 @@ class PageController extends Controller
     {
         $user = $this->user->addUser($request);
 
-        return redirect('login')->with('message', trans('setting.registerpage.success'));
+        return redirect('login')->with('message2', trans('setting.registerpage.success'));
     }
 
     public function food($id)

@@ -106,7 +106,7 @@ Route::group(['prefix' => 'cart'], function()
 {
 	Route::post('add/{id}', 'CartController@addCart')->name('addCart');
 	Route::get('list', 'CartController@listCart')->name('listCart');
-	Route::get('delete/{id}', 'CartController@deleteCart')->name('deleteCart');
+	Route::get('delete/{rowId}', 'CartController@deleteCart')->name('deleteCart');
 	Route::get('update', 'CartController@updateCart');
 });
 Route::get('search', 'PageController@getSearch')->name('search');

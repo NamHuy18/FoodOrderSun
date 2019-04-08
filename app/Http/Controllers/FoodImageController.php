@@ -44,7 +44,10 @@ class FoodImageController extends Controller
         try 
         {
             $foodImage = foodImage::findOrFail($id);
-            unlink('upload/foodImage/'.$foodImage->image);
+            if (file_exists('upload/foodImage/'.$foodImage->image))
+            {
+                unlink('upload/foodImage/'.$foodImage->image);
+            } 
             $foodImage->delete();
 
             return redirect('admin/food/image/list/' . $id)->with('message', trans('setting.delete_success'));

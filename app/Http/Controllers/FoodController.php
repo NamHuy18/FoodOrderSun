@@ -78,7 +78,10 @@ class FoodController extends Controller
         try 
         {
             $food = Food::findOrFail($id);
-            unlink('upload/food/'.$food->image);
+            if (file_exists('upload/food/'.$food->image))
+            {
+                unlink('upload/food/'.$food->image);
+            } 
             $food->delete();
             return redirect(route('listFood'))->with('message', trans('setting.delete_success'));
         } 

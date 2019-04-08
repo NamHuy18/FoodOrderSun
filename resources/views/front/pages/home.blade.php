@@ -11,9 +11,9 @@
                                 <p>Exclusive Offer -10% Off This Week</p>
                                 <h2>Live <strong>healthy</strong> with a glass</h2>
                                 <h3>of <strong>fruit juice</strong> every day</h3>  
-                                <h6>Starting at<span>$42.99</span></h6>
+                                <h6>Starting at<span>10,000 VND</span></h6>
                                 <div class="slider_btn">
-                                    <a href="shop.html">{{ trans('setting.homepage.shopping') }}</a>
+                                <a href="{{route('home')}}">{{ trans('setting.homepage.shopping') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                     <div class="features_product_active owl-carousel">
                         @foreach($category as $ca)
                             @foreach ($ca->foods as $fo)
-                                @if ($fo->pivot->category_id == 6)  
+                                @if ($fo->pivot->category_id == 1)  
                                     <div class="col-lg-2">
                                         <div class="single__product">
                                             <div class="single_product__inner">
@@ -209,7 +209,7 @@
                     <div class="features_product_active owl-carousel">
                         @foreach($category as $ca)
                             @foreach ($ca->foods as $fo)
-                                @if ($fo->pivot->category_id == 7)
+                                @if ($fo->pivot->category_id == 5)
                                     <div class="col-lg-2">
                                         <div class="single__product">
                                             <div class="single_product__inner">
@@ -258,7 +258,7 @@
                     <div class="features_product_active owl-carousel">
                         @foreach($category as $ca)
                             @foreach ($ca->foods as $fo)
-                                @if ($fo->pivot->category_id == 8)  
+                                @if ($fo->pivot->category_id == 6)  
                                     <div class="col-lg-2">
                                         <div class="single__product">
                                             <div class="single_product__inner">
@@ -441,7 +441,7 @@
                 <div class="best_selling_product_three owl-carousel">
                     @foreach($category as $ca)
                         @foreach ($ca->foods as $fo)
-                            @if ($fo->pivot->category_id == 3)  
+                            @if ($fo->pivot->category_id == 2)  
                                 <div class="best_selling_product">                          
                                     <div class="single_small_product small_three">
                                         <div class="product_thumb">
@@ -521,7 +521,7 @@
                 <div class="best_selling_product_three owl-carousel">
                     @foreach($category as $ca)
                         @foreach ($ca->foods as $fo)
-                            @if ($fo->pivot->category_id == 5)  
+                            @if ($fo->pivot->category_id == 3)  
                                 <div class="best_selling_product">                          
                                     <div class="single_small_product small_three">
                                         <div class="product_thumb">

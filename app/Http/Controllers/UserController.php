@@ -69,7 +69,10 @@ class userController extends Controller
         try 
         {
             $user = User::findOrFail($id);
-            unlink('upload/user/'.$user->avatar);
+            if (file_exists('upload/user/'.$user->avatar))
+            {
+                unlink('upload/user/'.$user->avatar);
+            } 
             $user->delete();
 
             return redirect(route('listUser'))->with('message', trans('setting.delete_success'));

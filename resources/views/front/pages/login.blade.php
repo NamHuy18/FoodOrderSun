@@ -21,9 +21,14 @@
         @endforeach
     </div>
 @endif
-@if (session('message'))
+@if (session('message1'))
+    <div class="alert alert-danger">
+        {{ session('message1') }}
+    </div>
+@endif
+@if (session('message2'))
     <div class="alert alert-success">
-        {{ session('message') }}
+        {{ session('message2') }}
     </div>
 @endif
 <div class="page_login_section">
@@ -50,10 +55,6 @@
                                     {!! Form::submit(trans('setting.login'), ['class' => 'inline']) !!}  
                                 </div>                             
                             </div> 
-                            &nbsp;
-                            <div class="col-12">
-                            <a href="{{ route('loginFB', ['social' => 'facebook']) }}" class="btn btn-primary">{{ trans('setting.loginFB') }}</a>  
-                        </div> 
                         </div>
                     {!! Form::close() !!}    
                 </div>    

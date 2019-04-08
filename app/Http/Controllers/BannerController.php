@@ -69,7 +69,10 @@ class BannerController extends Controller
         try 
         {
             $banner = Banner::findOrFail($id);
-            unlink('upload/banner/'.$banner->image);
+            if (file_exists('upload/banner/'.$banner->image))
+            {
+                unlink('upload/banner/'.$banner->image);
+            } 
             $banner->delete();
             
             return redirect(route('listBanner'))->with('message', trans('setting.delete_success'));

@@ -68,7 +68,7 @@ class UserRepository
             {
                 $avatar = str_random(4) . '_' . $name;
             }
-            if (isset($user->avatar))
+            if (file_exists('upload/user/'.$user->avatar))
             {
                 unlink('upload/user/'.$user->avatar);
             }              

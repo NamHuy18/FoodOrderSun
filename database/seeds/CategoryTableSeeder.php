@@ -11,16 +11,13 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Category::class, 8)->create()->each(function($category){
-            $boolean = random_int(0,1);
-            $ids = range(1,10);
-            shuffle($ids);
-            if($boolean){
-                $sliced = array_slice($ids, 0, 2);
-
-                $category->foods()->attach($sliced);
-            }
-            
-        });
+        DB::table('categories')->insert([
+            ['name' => 'Bánh Cắt Nhỏ', 'slug' => 'banh-cat-nho'],
+            ['name' => 'Bánh Hình Trái Tim', 'slug' => 'banh-hinh-trai-tim'],
+            ['name' => 'Bánh Mì', 'slug' => 'banh-mi'],
+            ['name' => 'Bánh Noel', 'slug' => 'banh-noel'],
+            ['name' => 'Bánh Sinh Nhật', 'slug' => 'banh-sinh-nhat'],      
+            ['name' => 'Cupcakes', 'slug' => 'cup-cakes'],
+        ]);
     }
 }

@@ -64,10 +64,10 @@ class NewsRepository
             {
                 $image = str_random(4) . '_' . $name;
             }
-            if (isset($image))
+            if (file_exists('upload/news/'.$news->image))
             {
                 unlink('upload/news/'.$news->image);
-            }
+            } 
             $file->move(config('setting.avatar.news'), $image);
             $news->image = $image;
         }

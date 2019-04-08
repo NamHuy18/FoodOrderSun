@@ -209,9 +209,7 @@
         </div>
         <div class="row">
             <div class="related_product_active owl-carousel">
-                <div class="label_textarea">
-                    <textarea placeholder="Comment*"></textarea>    
-                </div>                 @foreach($category as $ca)
+                @foreach($category as $ca)
                     @foreach ($ca->foods as $fo)
                         @if ($fo->pivot->category_id == $dataFood)
                             <div class="col-lg-2">

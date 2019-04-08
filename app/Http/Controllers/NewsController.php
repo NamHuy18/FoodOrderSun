@@ -69,7 +69,10 @@ class NewsController extends Controller
         try 
         {
             $news = News::findOrFail($id);
-            // unlink('upload/news/'.$news->image);
+            if (file_exists('upload/news/'.$news->image))
+            {
+                unlink('upload/news/'.$news->image);
+            } 
             $news->delete();
 
             return redirect(route('listNews'))->with('message', trans('setting.delete_success'));

@@ -60,7 +60,7 @@ class FoodRepository
 
     public function chooseCategory()
     {
-        return Food::all();
+        return Category::all();
     }
 
     public function findOrFail($id)
@@ -123,10 +123,10 @@ class FoodRepository
             {
                 $image = str_random(4) . '_' . $name;
             }
-            if (isset($image))
+            if (file_exists('upload/food/'.$food->image))
             {
                 unlink('upload/food/'.$food->image);
-            }
+            } 
             $file->move(config('setting.avatar.food'), $image);
             $food->image = $image;
         }

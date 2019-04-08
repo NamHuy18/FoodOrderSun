@@ -11,12 +11,15 @@ class PromotionTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Promotion::class, 15)->create()->each(function($promotion)
-        {
-        	$promotion->foods()->saveMany(factory(App\Food::class, rand(1, 4))->create([
-                'promotion_id' => $promotion->id
-                ])
-            );
-        });
+        DB::table('promotions')->insert([
+            ['discount' => '10', 'start_date' => '2019-04-09 00:00:00', 'end_date' => '2019-04-30 00:00:00'],
+            ['discount' => '20', 'start_date' => '2019-04-09 00:00:00', 'end_date' => '2019-04-30 00:00:00'],
+            ['discount' => '30', 'start_date' => '2019-04-09 00:00:00', 'end_date' => '2019-04-09 00:00:00'],
+            ['discount' => '40', 'start_date' => '2019-04-09 00:00:00', 'end_date' => '2019-04-30 00:00:00'],
+            ['discount' => '50', 'start_date' => '2019-04-09 00:00:00', 'end_date' => '2019-04-30 00:00:00'],
+            ['discount' => '60', 'start_date' => '2019-04-09 00:00:00', 'end_date' => '2019-04-30 00:00:00'],
+            ['discount' => '70', 'start_date' => '2019-04-09 00:00:00', 'end_date' => '2019-04-30 00:00:00'],
+            ['discount' => '80', 'start_date' => '2019-04-09 00:00:00', 'end_date' => '2019-04-30 00:00:00'],
+        ]);
     }
 }
