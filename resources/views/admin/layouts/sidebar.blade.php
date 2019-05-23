@@ -34,9 +34,7 @@
                     <li >
                         <a href="{{ route('listFood') }}">{{ trans('setting.product') }}</a>
                     </li>
-                    <li >
-                        <a href="{{ route('listSale') }}">{{ trans('setting.sale_manage') }}</a>
-                        </li>
+                    
                     <li >
                         <a href="#">{{ trans('setting.feedback') }}</a>
                     </li>
@@ -54,19 +52,7 @@
                     <strong></strong>
                 </a>
             </li>
-            <li class="content">
-                <a href="#" class=" exp" >
-                    <span>{{ trans('setting.content') }}</span>
-                </a>
-                <ul class="sub">
-                    <li >
-                        <a href="{{ route('listBanner') }}">{{ trans('setting.banner') }}</a>
-                    </li>
-                    <li >
-                        <a href="#">{{ trans('setting.contact') }}</a>
-                    </li>
-                </ul>
-            </li>
+           
         </ul>
     </div>
     <div class="clear"></div>
